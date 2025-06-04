@@ -36,50 +36,74 @@ This educational platform is specifically designed to support teachers in effici
 
 ## Screenshots
 
-- **Login Page**  
+- **Login Page**
+
   ![Login Page Screenshot](screenshots/login.png)
+  
 
-- **Registration Page**  
+- **Registration Page**
+
   ![Registration Page Screenshot](screenshots/register.png)
+  
 
-- **Student Dashboard**  
+- **Student Dashboard**
+
   ![Student Dashboard Screenshot](screenshots/dashboard.png)
+  
 
-- **Test Score Report**  
+- **Test Score Report**
+
   ![Test Score Report 1](screenshots/score-report1.png)
   ![Test Score Report 2](screenshots/score-report2.png)
+  
 
-- **Test Overview and History**  
+- **Test Overview and History**
+
   ![Test Overview and History](screenshots/test-overview.png)
+  
 
-- **Test Selection**  
+- **Test Selection**
+
   ![Test Selection](screenshots/test-selection.png)
+  
 
-- **Video Library Page**  
+- **Video Library Page**
+
   ![Video Library Page](screenshots/videos.png)
+  
 
-- **Community Page**  
+- **Community Page**
+  
   ![Community Page](screenshots/community.png)
+  
 
-- **Admin Controls > Accounts**  
+- **Admin Controls > Accounts**
+
   ![Admin Accounts 1](screenshots/admin-accounts1.png)
   ![Admin Accounts 2](screenshots/admin-accounts2.png)
   ![Admin Accounts 3](screenshots/admin-accounts3.png)
   ![Admin Accounts 4](screenshots/admin-accounts4.png)
   ![Admin Accounts 4](screenshots/admin-accounts5.png)
+  
 
-- **Admin Controls > Tests**  
+- **Admin Controls > Tests**
+
   ![Admin Tests 1](screenshots/admin-tests1.png)
   ![Admin Tests 2](screenshots/admin-tests2.png)
   ![Admin Tests 3](screenshots/admin-tests3.png)
+  
 
-- **Admin Controls > Videos**  
+- **Admin Controls > Videos**
+
   ![Admin Videos 1](screenshots/admin-videos1.png)
   ![Admin Videos 2](screenshots/admin-videos2.png)
   ![Admin Videos 3](screenshots/admin-videos3.png)
+  
 
-- **Admin Controls > Edit test content**  
+- **Admin Controls > Edit test content**
+
   ![Edit test content](screenshots/admin-edit-test.png)
+  
 
 
 ---
