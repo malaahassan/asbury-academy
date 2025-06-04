@@ -1,0 +1,637 @@
+
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/* Italic Versions */
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/poppins/Poppins-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* NOTO Sans */
+
+/* Thin */
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  /* ExtraLight */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  /* Light */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  /* Regular */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  /* Medium */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  /* SemiBold */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  /* Bold */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  /* ExtraBold */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  /* Black */
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Noto Sans';
+    src: url('fonts/NotoSans/NotoSans-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+  }
+
+
+  /* MATH JAX (KATEX) */
+  @font-face {
+    font-family: MathJax_Font;
+    src: url('fonts/MathJax/MathJax_Main-Regular.woff');
+    font-style: normal;
+  }
+
+  body {
+    font-family: 'Noto Sans';
+  }
+
+  .scores-section {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 97;
+    background-color: #FFF;
+    display: none;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .scores-section-inner-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1000px;
+    height: max-content;
+    max-width: calc(100% - 20px);
+  }
+
+
+  .scoresMainContainer {
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: #FFF;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+
+  .scores-inner-secondary-container {
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  .scoresTitle {
+    background: #e7267f;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: white;
+    width: 100%;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin: 0;
+  }
+
+
+  .scores-main-time-container {
+    overflow: auto;
+    margin: auto;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 1em;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+  }
+
+  .scores-time-graph-container {
+    min-width: 500px;
+    width: 100%;
+    max-width: 1000px;
+  }
+  
+  .scoresSecondaryContainer {
+    background-color: #FFF;
+    padding: 2em;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+  }
+
+  
+  .testDetailsContainer {
+    display: none;
+  }
+
+  .katex {
+    font-family: MathJax_Font !important;
+    font-size: 116% !important;
+  }
+
+
+  .typicalButton {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 20px;
+    text-align: center;
+    background: #000;
+    padding: 5px;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    border-radius: 35px;
+    
+  }
+
+  .typicalButton.pink { 
+    background: rgb(239, 71, 148) !important;
+  }
+
+  .typicalButton:hover, #view-profile-button:hover {
+    opacity: 0.9;
+  }
+
+  .typicalButton:active, #view-profile-button:active {
+      opacity: 0.8;
+  }
+
+  #uploadingTest {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-color: rgba(0, 0, 0, 0.35);
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    transition: 0.3s;
+  }
+
+  .upload-menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+;
+    position: relative;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    max-height: 98vh;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    position: relative;
+    width: 460px;
+    max-width: calc(100% - 20px);
+    border-radius: 5px;
+    padding: 2em;
+    box-sizing: border-box;
+  }
+
+  #uploadFailedButtons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 2em;
+  }
+
+
+  #returnHomeButton {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.mistakeLine {
+	cursor: pointer;
+	position: relative;
+}
+
+
+.mistakeLine:hover {
+	background: rgb(245, 245, 245) !important;
+}
+
+.mistakeLine:active {
+	background: rgb(240, 240, 240) !important;
+}
+
+.table td.explanation-column {
+    max-width: 150px;
+    text-align: left;
+}
+
+
+
+
+
+.table {
+  border-collapse: collapse;
+  margin: 25px auto;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+
+.table thead tr {
+    background-color: rgb(231, 38, 127);
+    color: #ffffff;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+	text-align: center;
+}
+
+
+.table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: rgb(252, 252, 252);
+}
+
+.table tbody tr:last-of-type {
+    border-bottom: 2px solid rgb(231, 38, 127);
+}
+
+
+.table tbody tr.active-row {
+    font-weight: bold;
+    color: #007098;
+}
+
+
+
+/* TABLES */
+/*
+.table{
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.table{
+  margin-left: auto;
+  margin-right: auto;
+	width: 80%;
+	border-collapse: collapse;
+  -webkit-box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+          box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+
+.table td,.table th{
+  padding:12px 15px;
+  /*border:1px solid rgba(0, 0, 0, 0.2);*//*
+  text-align: center;
+  font-size:16px;
+}*/
+
+.foldTable td, .foldTable th {
+  white-space: nowrap;
+}
+
+.foldTable td, .foldTable th {
+  white-space: normal;
+}
+
+/*.table th{
+	    background-image: -webkit-gradient(linear, left bottom, left top, from(#0f3e5d), to(#556f86));
+	    background-image: -o-linear-gradient(bottom, #0f3e5d 0%, #556f86 100%);
+	    background-image: linear-gradient(to top, #0f3e5d 0%, #556f86 100%);
+	color:#ffffff;
+}
+
+.table tbody tr {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e7eeff), to(#eef1f5));
+  background-image: -o-linear-gradient(bottom, #e7eeff 0%, #eef1f5 100%);
+  background-image: linear-gradient(to top, #e7eeff 0%, #eef1f5 100%);
+}
+
+.table tbody tr:nth-child(even){
+  background-image: none;
+  background: -o-linear-gradient(top, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), -o-linear-gradient(top, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), -o-linear-gradient(
+57deg
+, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+  background: linear-gradient(to bottom, #D5DEE7 0%, #E8EBF2 50%, #E2E7ED 100%), linear-gradient(to bottom, rgba(0,0,0,0.02) 50%, rgba(255,255,255,0.02) 61%, rgba(0,0,0,0.02) 73%), linear-gradient(
+33deg
+, rgba(255,255,255,0.20) 0%, rgba(0,0,0,0.20) 100%);
+    background-blend-mode: normal,color-burn;
+}*/
+
+
+
+/*responsive*/
+@media(max-width: 1500px){
+  .foldTable td,.foldTable th{
+    font-size: 14px;
+  }
+}
+
+@media(max-width: 1400px){
+  .foldTable td,.foldTable th{
+    font-size: 13px;
+  }
+}
+
+@media(max-width: 1380px){
+  .foldTable td,.foldTable th{
+    font-size: 11.75px;
+  }
+}
+
+@media(max-width: 1250px){
+    .table td.explanation-column {
+        max-width: unset;
+    }
+  .foldTable {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+            overflow: unset;
+            width: 100%;
+  }
+  .foldTable td,.foldTable th{
+    font-size: 16px;
+  }
+	.foldTable thead{
+		display: none;
+	}
+
+	.foldTable, .foldTable tbody, .foldTable tr, .foldTable td{
+		display: block;
+	}
+	.foldTable tr{
+		margin-bottom:15px;
+    -webkit-box-shadow: 0px 0px 4px 0px rgb(0, 0, 0, 0.2);
+            box-shadow: 0px 0px 4px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 4px;
+	}
+	.foldTable td{
+		text-align: right;
+		position: relative;
+	}
+	.foldTable td::before{
+		content: attr(data-label);
+		position: absolute;
+		left:0;
+		width: 50%;
+		padding-left:15px;
+		font-size:15px;
+		font-weight: bold;
+		text-align: left;
+	}
+}
+

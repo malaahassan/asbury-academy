@@ -1,0 +1,933 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  overflow: hidden;
+  -ms-user-select: none;
+      user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  font-family: 'Noto Sans';
+}
+
+img {
+  -ms-user-select: none !important;
+      user-select: none !important;
+  -webkit-user-select: none !important;
+  -khtml-user-select: none !important;
+  -moz-user-select: none !important;
+  -o-user-select: none !important;
+}
+
+
+
+/*HIGHLIGHT STUFF*/
+
+.allowhighlight {
+  -ms-user-select: auto;
+      user-select: auto;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -o-user-select: text;
+}
+
+::-moz-selection {
+  background: #87ceeb;
+}
+
+::selection {
+  background: #87ceeb;
+}
+
+.allowhighlight .highlight:not([style="background-color: rgb(255, 255, 123);"] > .highlight) {
+  background-color: #87ceeb !important;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+#toolsDropDown {
+  display: none;
+  width: 160px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+          box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+  padding: 6px 0 6px 0;
+}
+
+#toolsDropDown > li {
+  padding-left: 15px;
+  height: 26px;
+  line-height: 20px;
+  font-size: 14px;
+  text-align: left;
+  font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#toolsDropDown > li:hover {
+  background-color: #dd271f;
+  color: white;
+}
+
+.checkmark {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  line-height: 14px;
+  vertical-align: text-top;
+  background-image: url(resources/glyphicons-halflings.png);
+  background-position: -288px 0;
+  background-repeat: no-repeat;
+  margin-right: 2px;
+}
+
+/*.manualHL {
+  display: inline;
+  background-color: red;
+}*/
+
+/*Maths*/
+
+.frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.frac > span {
+    display: block;
+}
+
+.frac span.bottom{
+    border-top: thin solid #000;
+}
+
+.frac span.symbol {
+    display: none;
+}
+
+/*
+.mistakeLine > span > .frac {
+  display: inline;
+  letter-spacing: 0;
+  vertical-align: unset;
+}
+
+.mistakeLine > span > .frac span.symbol {
+  display: inline;
+}
+
+.mistakeLine > span > .frac span.bottom {
+  border-top: none;
+}
+
+.mistakeLine > span > .frac > span {
+    display: inline;
+    padding: 0;
+}*/
+
+
+
+#topnav {
+  width: 100%;
+  height: 60px;
+  background: #001733;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+
+
+
+#bottomnav button:focus {
+  outline-color: black;
+  outline-style: groove;
+  outline-offset: -2px;
+}
+
+#topnav button:hover {
+  background-color: rgb(241, 241, 241);
+}
+
+#bottomnavigation {
+  height: 28px;
+  position: absolute;
+  left: 25px;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+#bottomnavigationbuttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+#bottomnavigationflags {
+  position: absolute;
+  left: 54px;
+  top: -5px;
+  max-width: 928px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40px;
+  overflow: hidden;
+}
+
+#bottomnavigation #bottomnavSlideLeft {
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  color: #666666;
+}
+
+#bottomnavigation #bottomnavSlideRight {
+  border-bottom-right-radius: 3px;
+  border-top-right-radius: 3px;
+  color: #666666;
+}
+
+.flagIconContainer {
+  min-width: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  visibility: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 22px;
+  background-color: #eceee9 !important;
+  border-radius: 3px 3px 0px 0px;
+  cursor: pointer;
+  border: 1px solid #dddddd;
+}
+
+.flag {
+  width: 14px;
+  height: 14px;
+  background-position: -312px -24px;
+  background-image: url(resources/glyphicons-halflings.png);
+}
+
+#bottomnavigation button {
+  background-color: #ffffff;
+  color: #aaaaaa;
+  font-weight: bold;
+  font-size: 12px;
+  min-width: 29px;
+  max-width: 29px;
+  height: 100%;
+  border: 1px solid #ddd;
+  cursor: pointer;
+  position: relative;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+
+
+#bottomnavSlideLeft:hover, #bottomnavSlideRight:hover {
+  background-color: #f5f5f5;
+}
+
+
+#bottomnavigation #selectednavButton {
+  background-color: #e42a22;
+  background-image: url(resources/navbar-active.png);
+  color: #ffffff;
+}
+
+#bottomnavigation .answerednavButton {
+  color: #4d4d4d;
+  background-color: #e8e8e8;
+}
+
+
+
+
+
+.diffButton {
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 11px;
+  cursor: pointer;
+  background-color: rgb(250, 250, 250);
+  border: none;
+}
+
+#zoomButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+#zoomButtons > button{
+  width: 51px;
+  height: 36px;
+}
+
+#toolsButton {
+  border-radius: 10px;
+  width: 66px;
+  /*HIGHLIGHT STUFF*/
+  position: relative;
+}
+
+#toolsButton > span {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border-top: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+#resetZoom {
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+#resetZoom > span, #zoomIn > span, #zoomOut > span {
+  width: 14px;
+  height: 14px;
+  background-image: url(resources/glyphicons-halflings.png);
+}
+
+#resetZoom > span {
+  background-position: -216px -24px;
+}
+
+#zoomIn > span {
+  background-position: -336px 0;
+}
+
+#zoomOut > span {
+  background-position: -360px 0;
+}
+
+#zoomOut {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#zoomIn {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+#clearHighlightButton {
+  width: 106px;
+  height: 36px;
+  border-radius: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+#timer {
+  width: 75px;
+  height: 36px;
+  border-radius: 5px;
+  color: #001733;
+  font-size: 15px !important;
+  font-weight: bold !important;
+  margin-right: 25px;
+  position: relative;
+  overflow: hidden;
+}
+
+#timerBar {
+  background-color: #dddddd !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#timerText {
+  z-index: 2;
+}
+
+#timeHidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 23, 51, 0.5);
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 3;
+}
+
+#timeHidden > img {
+  width: 17px;
+  height: 17px;
+}
+
+#rightButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#bottomnav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fafafa;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#flagButton {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 25px;
+  width: 75px;
+  height: 36px;
+  border-radius: 5px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7eaf0), to(#d9dce1));
+  background-image: -o-linear-gradient(#e7eaf0 0%, #d9dce1 100%);
+  background-image: linear-gradient(#e7eaf0 0%, #d9dce1 100%);
+  background-color: #d8dde6;
+  border: 1px solid #bfbfbf;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#flagButton:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7eaf0), to(#c8c9cb));
+  background-image: -o-linear-gradient(#e7eaf0 0%, #c8c9cb 100%);
+  background-image: linear-gradient(#e7eaf0 0%, #c8c9cb 100%);
+  background-color: #d8dde6;
+}
+
+
+#flagButton > span {
+  width: 14px;
+  height: 14px;
+  background-image: url(resources/glyphicons-halflings.png);
+  background-position: -312px -24px;
+  margin-right: 3px;
+}
+
+
+#questionArea:active {
+  border: solid 2px black;
+}
+
+#answerArea img, #questionArea img {
+  max-width: 100%;
+}
+
+
+#questionText {
+  font-size: 14px;
+  color: #333333;
+  border: solid 2px transparent;
+  padding-right: 15px;
+  max-width: 800px;
+}
+
+#questionText:active {
+  border: solid 2px black;
+}
+
+#questionArea .nounderline:not(#editor .nounderline) {
+  text-decoration: none;
+}
+
+.ql-align-center {
+  text-align: center;
+}
+
+
+
+.answer{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+input[type="radio"]:focus{
+  outline-style: groove;
+  outline-color: black;
+  outline-width: 2px;
+  outline-offset: -2.5px;
+}
+
+input[type="radio"]{
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  min-height: 20px;
+  cursor: pointer;
+  background-color: white;
+}
+
+label {
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.formlabel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+label > .choice {
+  margin-right: 5px;
+}
+
+label h1,
+label h2,
+label h3,
+label h4,
+label h5,
+label h6,
+label p {
+  margin: 0;
+}
+
+#navigatorBackground, #proceedMessage, #shareMessage {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 98;
+  display: none;
+}
+
+#proceedMessage > div {
+  width: 550px;
+  height: 80px;
+  border-radius: 6px;
+  background-color: white;
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+
+#shareMessage > div {
+  width: 550px;
+  border-radius: 6px;
+  background-color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+
+#proceedButton {
+  position: absolute;
+  right: 8px;
+  bottom: 5px;
+  width: 56px;
+  height: 36px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#shareButtons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#shareButtons > button {
+  margin-right: 10px;
+  width: 56px;
+  height: 36px;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+}
+
+#proceedButton:hover, #shareButtons > button:hover {
+  background-color: rgb(150, 16, 16);
+}
+
+#navigator {
+  width: 95%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+#navigatorDiv {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  height: calc(100% - 31px - 18.720px - 18.720px - 75px - 10px);
+
+}
+
+#navigatorQuestions {
+  margin-top: 10px;
+}
+
+
+#navigator > h3 {
+  margin-left: 15px;
+}
+
+#navigator > hr {
+  opacity: 0.5;
+}
+
+#navigatorQuestions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.oneline {
+  border-top: solid rgba(0, 0, 0, 0.2) 0.5px;
+  border-bottom: solid rgba(0, 0, 0, 0.2) 0.5px;
+  min-height: 38.5px;
+  height: 38.5px;
+  min-width: 100%;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.oneline:hover {
+  background-color: #f5f5f5;
+}
+
+
+.oneline > .number, .oneline > .state, .oneline > .flagged {
+  position: absolute;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.oneline > .state {
+  left: 70px;
+}
+
+.oneline > .number {
+  left: 25px;
+}
+
+.oneline > .flagged {
+  left: 200px;
+  cursor: pointer;
+}
+
+.lineArrow {
+  background-position: -264px -72px;
+  background-image: url(resources/glyphicons-halflings.png);
+  position: absolute;
+  left: 5px;
+  width: 14px;
+  height: 14px;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  display: none;
+}
+
+#navigatorTopClose {
+  color: black;
+  opacity: 0.5;
+  background-color: transparent;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+}
+
+#noTitle {
+  margin-left: 25px;
+}
+
+#stateTitle {
+  margin-left: 40px;
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+#flaggedTitle {
+  margin-left: 75px;
+  text-decoration: underline;
+  color: blue;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+
+
+#navigationFooter {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 66px;
+  width: 100%;
+  background-color: #f5f5f5;
+}
+
+#navigationClose {
+  width: 54px;
+  height: 36px;
+  color: #333;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fafbfc), to(#e5e7eb));
+  background-image: -o-linear-gradient(#fafbfc 0%, #e5e7eb 100%);
+  background-image: linear-gradient(#fafbfc 0%, #e5e7eb 100%);
+  background-color: #d8dde6;
+  border-radius: 5px;
+  border-color: #aeb4bd #adadad #9fa5af;
+  border: 1px solid #bfbfbf;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  right: 25px;
+  font-weight: bold;
+}
+
+#navigationClose:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7eaf0), to(#d9dce1));
+  background-image: -o-linear-gradient(#e7eaf0 0%, #d9dce1 100%);
+  background-image: linear-gradient(#e7eaf0 0%, #d9dce1 100%);
+  background-color: #d8dde6;
+}
+
+
+#loading {
+  z-index: 99;
+  background-color: white;
+  position: fixed;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#preTest {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 98;
+  
+}
+
+#preTestLoadedData {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+#circleContainer {
+  transform: rotate(270deg) scale(1.75);
+}
+
+
+
+
+
+@media only screen and (max-width: 750px) {
+  #rightButtons button:not(#timer) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  #topnav > img {
+    display: none;
+  }
+  #timer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  #switchScore {
+    width: calc(100% - 4px);
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  #navButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 235px) {
+  #timer {
+    display: none;
+  }
+  #bottomnavigation {
+    display: none;
+  }
+  #bottomnavigationflags {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #proceedMessage > div {
+    width: 90%;
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+  #testSection {
+    height: calc(100vh - 200px);
+  }
+}
+

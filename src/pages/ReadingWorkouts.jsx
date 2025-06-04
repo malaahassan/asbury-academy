@@ -1,0 +1,39 @@
+import Header from '../components/Header/Header';
+import Sidebar from '../components/Sidebar/Sidebar';
+import TestLineGraphContainer from '../components/Tests/TestLineGraphContainer.jsx';
+import TestBarChartContainer from '../components/Tests/TestBarChartContainer.jsx';
+import UserTestCards from '../components/Tests/UserTestCards.jsx';
+import TestHistoryContainer from '../components/Tests/TestHistoryContainer.jsx';
+import React, { useRef, useContext } from 'react';
+import { LoginContext } from '../components/Contexts/LoginContext';
+const sections = ["Workout"];
+const colors = ['#ef4794'];
+
+
+function ReadingWorkouts() {
+    const { logData, setLogData } = useContext(LoginContext);
+    const containerRef = useRef();
+    return (
+        <div className="inner-content">
+          <Sidebar page='reading-workouts'/>
+          <div className="inner-content-with-header">
+            <Header />
+            <div className="test-page-container" ref={containerRef}>
+              <h3 className="dashboard-header">Reading Workouts Overview</h3>
+              <div className="dashboard-graphs-container">
+                <TestLineGraphContainer ready={true} user={logData.user_id} type="reading_workout" accounts={false}/>
+                <TestBarChartContainer ready={true} user={logData.user_id} type="reading_workout" accounts={false}/>
+              </div>
+
+              <TestHistoryContainer ready={true} type="reading_workout" user={logData.user_id} control={true} title="Previous Reading Workouts"/>
+
+              <UserTestCards title="Reading Workouts" type="reading_workout" containerRef={containerRef}/>
+          
+            </div>
+            
+          </div>
+        </div>
+    );
+  }
+  
+export default ReadingWorkouts;

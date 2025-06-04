@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="/asbury.ico">
+    <link rel="stylesheet" href="editor.css?v=12541">
+    <link rel="stylesheet" href="/libs/reading.css">
+    <link rel="stylesheet" href="form.css?V=24">
+    <link rel="stylesheet" href="/forms.css?V=24">
+    <!-- Include stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="/libs/katex/katex.min.css">
+
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="/libs/katex/katex.min.js"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="/libs/katex/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+    <title>Section Editor</title>
+    <style>
+
+
+  .ql-snow .ql-color-picker .ql-picker-item {
+      border: solid 1px #b5b5b5;
+  }
+</style>
+  </head>
+  <body>
+    <div id="topnav">
+      <img src="/logo.png">
+      <!--<button id="saveReview" class="diffButton">Save</button>-->
+      
+      <div id="topnavButtons">
+        <div id="interactionsButtons">
+          <button id="prevButton" class="whiteButton">Prev</button>
+          <button id="navButton" class="whiteButton">Nav</button>
+          <button id="editCodeButton" class="diffButton whiteButton">Code</button>
+          <button id="nextButton" class="whiteButton">Next</button>
+        </div>
+        <div id="rightButtons">
+          <button id="addPassageButton" class="whiteButton">Add Questions</button>
+          <button id="exitReview" class="whiteButton">Save & Close</button>
+        </div>
+        
+      </div>
+
+        
+
+      
+    </div>
+    <section id="testSection">
+      <div id="questionArea">
+        <h4>Passage <span id="passageNo"></span></h4>
+        <div id="editorContainer">
+          <div id="editor">
+            <p></p>
+          </div>
+        </div>
+        <div id="afterEdit"></div>
+        <button class="diffButton slightWhiteButton" id="finishPassageButton">Finish Passage</button>
+      </div>
+      <div id="answerArea">
+        <h5>Question <span id="questionNo"></span></h5>
+        <div id="question"></div>
+        <span class="answer"><input type="radio" id="choice1" name="choices" disabled="true">
+        <label id="label1" for="choice1"><span id="choice1letter"></span> <div id="editor1"></div></label></span><br>
+        <span class="answer"><input type="radio" id="choice2" name="choices" disabled="true">
+        <label id="label2" for="choice2"><span id="choice2letter"></span> <div id="editor2"></div></label></span><br>
+        <span class="answer"><input type="radio" id="choice3" name="choices" disabled="true">
+        <label id="label3" for="choice3"><span id="choice3letter"></span> <div id="editor3"></div></label></span><br>
+        <span class="answer"><input type="radio" id="choice4" name="choices" disabled="true">
+        <label id="label4" for="choice4"><span id="choice4letter"></span><div id="editor4"></div></label></span><br>
+        <span class="answer" id="fifthchoice"><input type="radio" id="choice4" name="choices" disabled="true">
+        <label id="label5" for="choice5"><span id="choice5letter"></span><div id="editor4a"></div></label></span><br>
+        <h4>What is the answer?</h4>
+        <select name="questionanswer" id="questionanswer">
+
+        </select>
+        <div id="questionpassagequestioncontainer">
+          <h4>Which passage does this question refer to?</h4>
+          <select name="questionpassage" id="questionpassage">
+          </select>
+        </div>
+        
+        <h4>Answer Explanation</h4>
+        <div id="editor5" style="max-height: 200px;"></div>
+        <h4 id="questionanswerdurationh4" style="display: none;">Maximum duration to answer (In Seconds)</h4>
+        <input name="questionanswerduration" style="display: none;" id="questionanswerduration" type="number" min="1" value="60">
+
+        <h4 id="questionanswerlessonh4" style="display: none;">Question Lesson</h4>
+        <input name="questionanswerlesson" style="display: none;" id="questionanswerlesson" type="text">
+
+        <div style="display: flex; flex-wrap: wrap; margin-top: 15px;">
+          <button class="diffButton slightWhiteButton" id="editPassageButton">Edit Passage</button>
+          <button class="diffButton slightWhiteButton" id="deleteQuestionButton">Delete Question</button>
+          <button style="display: none;pointer-events: none; opacity: 0.5;" class="diffButton slightWhiteButton" id="editQuestionButton">Edit Question Order</button>
+      
+        </div>
+        
+      </div>
+    </section>
+    <div id="bottomnav">
+      <div id="bottomnavigationflags"></div>
+      <div id="bottomnavigation">
+        <button id="bottomnavSlideLeft">«</button>
+        <div id="bottomnavigationbuttons"></div>
+        <button id="bottomnavSlideRight">»</button>
+      </div>
+    </div>
+    <div id="proceedMessage">
+      <div id="proceedMessageElements">
+      </div>
+    </div>
+    <div id="navigatorBackground">
+      <div id="navigator">
+        <button id="navigatorTopClose">×</button>
+        <h3>Item Navigation</h3>
+        <hr>
+        <div id="navigatorDiv">
+          <div id="navigatorTitles"><span id="noTitle">#</span></div>
+          <div id="navigatorQuestions"></div>
+        </div>
+        <div id="navigationFooter">
+          <button id="navigationClose" class="diffButton">Close</button>
+        </div>
+      </div>
+    </div>
+    <div id="devMenu" class="menu">
+      <div>
+        <button id="devMenuTopClose" class="close">×</button>
+        <h3>Form code <span style="font-size: 12px;">(This is made for developers only, and any mistakes might mess up the whole form)</span></h3>
+        <div id="aceEditor"></div>
+        <p id="devMenuDown">
+          Fix errors in console log before saving.
+        </p>
+        <div id="devMenuDownButtons">
+          <button class="diffButton slightWhiteButton" id="discardDevButton">Discard changes</button>
+          <button class="diffButton slightWhiteButton" id="saveDevButton">Save changes</button>
+        </div>
+      </div>
+    </div>
+    <div id="errorMenu" class="menu">
+      <div style="width: 400px; height: 200px;">
+        <button id="errorMenuTopClose" class="close">×</button>
+        <h3 style="text-align:center;">Error</h3>
+        <p id="errorMenuText" style="    padding-left: 1em; padding-right: 1em;">An error has occured.</p>
+
+      </div>
+    </div>
+    <div id="addPassageMenu" class="menu">
+      <div>
+        <button id="addPassageMenuTopClose" class="close">×</button>
+        <h3 style="margin-left: 15px;" id="addPassageHeader">Add Passage</h3>
+        <div id="addPassageContainer">
+          <div style="display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;">Loading real tests...</div>
+        </div>
+
+      </div>
+    </div>
+    <div id="loading" style="display: flex;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+        <circle cx="50" cy="50" fill="none" stroke="rgb(231, 38, 127)" stroke-width="1" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.48780487804878053s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+        </circle>
+        <!-- [ldio] generated by https://loading.io/ --></svg>
+    </div>
+    <div id="blank">
+      <div id="uploadingTest">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: none; display: block; shape-rendering: auto;" width="200px" height="200px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+          <circle cx="50" cy="50" fill="none" stroke="rgb(231, 38, 127)" stroke-width="1" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+            <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="0.48780487804878053s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+          </circle>
+          <!-- [ldio] generated by https://loading.io/ --></svg>
+        <span id="uploadingTestText">Uploading test...<br>(DO NOT CLOSE THIS WINDOW)</span>
+      </div>
+    </div>
+    <!-- Include the Quill library -->
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <!-- Include the Quill Ace -->
+    <script src="ace-builds-master/src/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js?v=55"></script>
+  </body>
+</html>
